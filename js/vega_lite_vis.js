@@ -1,4 +1,2 @@
-var vg_1 = "map.vg.json";
-vegaEmbed("#bar_chart", vg_1).then(function(result) {
-// Access the Vega view instance(https://vega.github.io/vega/docs/api/view/) as result.view
-}).catch(console.error);
+var vg_1 = "https://raw.githubusercontent.com/ujay0005/3179/main/map.vg.json";
+vegaEmbed("#vis", vg_1, {mode: "vega-lite"}).then(console.log).catch(console.warn)
