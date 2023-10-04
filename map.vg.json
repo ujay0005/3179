@@ -39,7 +39,7 @@
             "lookup": "properties.NAME",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/ujay0005/3179/main/Environment_Temperature_change_E_All_Data_NOFLAG.csv"
+                "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/Environment_Temperature_change_E_All_Data_NOFLAG.csv"
               },
               "key": "Area",
               "fields": ["Y2020", "ElementCode", "MonthsCode"]
