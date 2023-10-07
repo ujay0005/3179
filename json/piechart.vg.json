@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/sector.csv"
+  },
+  "params": [
+    {
+      "name": "Yearc",
+      "value": 2000,
+      "bind": {
+        "input": "range",
+        "min": 1990,
+        "max": 2020,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.Year==Yearc"}],
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "Value", "type": "quantitative"},
+    "color": {"field": "Sector", "type": "nominal"}
+  }
+}
