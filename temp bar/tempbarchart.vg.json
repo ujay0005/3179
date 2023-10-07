@@ -1,0 +1,40 @@
+{
+    "width": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/ujay0005/3179/main/temp%20bar/data.csv"
+    },
+    "layer": [
+      {
+        "mark": "bar",
+        "encoding": {
+          "x": {
+            "type": "quantitative",
+            "field": "Year",
+            "axis": {"tickCount": 20},
+            "scale": {"domain": [1850, 2023]}
+          },
+          "y": {"type": "quantitative", "field": "Anomaly"},
+          "color": {
+            "field": "Anomaly",
+            "scale": {
+              "range": ["#187dc9", "#ffffff", "#f55151", "#fc0000"],
+              "type": "linear"
+            }
+          }
+        }
+      },
+      {
+        "mark": {"type": "line", "color": "purple"},
+        "transform": [{"regression": "Anomaly", "on": "Year"}],
+        "encoding": {
+          "y": {"field": "Anomaly", "type": "quantitative"},
+          "x": {
+            "field": "Year",
+            "type": "quantitative",
+            "axis": {"tickCount": 20},
+            "scale": {"domain": [1850, 2023]}
+          }
+        }
+      }
+    ]
+  }
