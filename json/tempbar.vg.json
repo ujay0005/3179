@@ -1,7 +1,7 @@
 {
     "width": 600,
     "data": {
-      "url": "https://raw.githubusercontent.com/ujay0005/3179/main/temp%20bar/data.csv"},
+      "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/tempbar.csv"},
     "layer": [
       {
         "mark": "bar",
