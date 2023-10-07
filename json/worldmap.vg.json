@@ -52,7 +52,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/data6.csv"
+              "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/worldmap.csv"
             },
             "key": "Area",
             "fields": ["Temp Changes", "Year"]
