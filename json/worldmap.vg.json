@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Climate Change",
+  "title": "Change in average temperature",
   "params": [
     {
       "name": "year",
