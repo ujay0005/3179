@@ -13,6 +13,12 @@ vegaEmbed("piechart", vg_4, {mode: "vega-lite"}).then(console.log).catch(console
 var vg_5 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/bubblechart.vj.json";
 vegaEmbed("#bubblechart", vg_5, {mode: "vega-lite"}).then(console.log).catch(console.warn)
 
+var vg_6 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/stack.vg.json";
+vegaEmbed("#stackchart", vg_6, {mode: "vega-lite"}).then(console.log).catch(console.warn)
+
+
+
+
 
 
 

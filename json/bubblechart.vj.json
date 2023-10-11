@@ -9,30 +9,7 @@
         "name": "tree",
         "values": [
           {"id": 1, "country": "", "parent": null, "emission": 10, "year": 2019},
-          {
-            "id": 2,
-            "country": "Australia",
-            "text": "Australia",
-            "parent": 1,
-            "emission": 4,
-            "year": 2019
-          },
-          {
-            "id": 3,
-            "country": "America",
-            "text": "America",
-            "parent": 1,
-            "emission": 8,
-            "year": 2019
-          },
-          {
-            "id": 4,
-            "country": "Other",
-            "text": "Other",
-            "parent": 1,
-            "emission": 4,
-            "year": 2019
-          },
+        
           {
             "id": 5,
             "country": "Australia",
