@@ -4,7 +4,15 @@ vegaEmbed("#map", vg_1, {mode: "vega-lite"}).then(console.log).catch(console.war
 var vg_2 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/tempbar.vg.json";
 vegaEmbed("#tempbar", vg_2, {mode: "vega-lite"}).then(console.log).catch(console.warn)
 
-var vg_3 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/tempbar.vg.json";
+var vg_3 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/ghg.vg.json";
 vegaEmbed("#areachart", vg_3, {mode: "vega-lite"}).then(console.log).catch(console.warn)
+
+var vg_4 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/ghg.vg.json";
+vegaEmbed("donutchart", vg_3, {mode: "vega-lite"}).then(console.log).catch(console.warn)
+
+var vg_5 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/ghg.vg.json";
+vegaEmbed("#bubblechart", vg_3, {mode: "vega-lite"}).then(console.log).catch(console.warn)
+
+
 
 

@@ -1,0 +1,121 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "width": 800,
+    "height": 800,
+    "autosize": "pad",
+    "title":"ghg emissions by country",
+    "data": [
+      {
+        "name": "tree",
+        "values": [
+          {"id": 1, "country": "", "parent": null, "emission": 10, "year": 2019},
+          {
+            "id": 2,
+            "country": "Australia",
+            "text": "Australia",
+            "parent": 1,
+            "emission": 4,
+            "year": 2019
+          },
+          {
+            "id": 3,
+            "country": "America",
+            "text": "America",
+            "parent": 1,
+            "emission": 8,
+            "year": 2019
+          },
+          {
+            "id": 4,
+            "country": "Other",
+            "text": "Other",
+            "parent": 1,
+            "emission": 4,
+            "year": 2019
+          },
+          {
+            "id": 5,
+            "country": "Australia",
+            "text": "Australia",
+            "parent": 1,
+            "emission": 4,
+            "year": 2020
+          },
+          {
+            "id": 6,
+            "country": "America",
+            "text": "America",
+            "parent": 1,
+            "emission": 8,
+            "year": 2020
+          },
+          {
+            "id": 7,
+            "country": "Other",
+            "text": "Other",
+            "parent": 1,
+            "emission": 4,
+            "year": 2020
+          }
+        ],
+  
+        "transform": [
+          {"type": "stratify", "key": "id", "parentKey": "parent"},
+          {
+            "type": "pack",
+            "field": "emission",
+            "padding": 7,
+            "size": [{"signal": "width"}, {"signal": "height"}],
+            "sort": {"field": "emission", "order": "descending"}
+          },
+  
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {"data": "tree", "field": "depth"},
+        "range": ["white", "#FFC9B3"]
+      }
+    ],
+    "marks": [
+      {
+        "type": "symbol",
+        "from": {"data": "tree"},
+        "encode": {
+          "enter": {
+            "shape": {"value": "circle"},
+            "fill": {"scale": "color", "field": "depth"},
+            "tooltip": {"signal": "datum.country + datum.emission"}
+          },
+          "update": {
+            "x": {"field": "x"},
+            "y": {"field": "y"},
+            "size": {"signal": "4 * datum.r * datum.r"},
+            "stroke": {"value": "white"},
+            "strokeWidth": {"value": 0.5}
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {"data": "tree"},
+        "encode": {
+          "enter": {
+            "text": {"field": "text"},
+            "fontSize": {"value": 8},
+            "baseline": {"value": "middle"}
+          },
+          "update": {
+            "x": {"field": "x"},
+            "y": {"field": "y"},
+            "dx": {"signal": "(datum.leftside ? -1 : 1)"},
+            "angle": {"signal": "datum.leftside ? datum.angle : datum.angle"},
+            "align": {"signal": "datum.leftside ? 'center' : 'center'"}
+          }
+        }
+      }
+    ]
+  }

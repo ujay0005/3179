@@ -26,7 +26,7 @@
         "mark": {"type": "line", "color": "purple"},
         "transform": [{"regression": "Anomaly", "on": "Year"}],
         "encoding": {
-          "y": {"field": "Anomaly", "type": "quantitative"},
+          "y": {"field": "Anomaly", "type": "quantitative","temp change"},
           "x": {
             "field": "Year",
             "type": "quantitative",
