@@ -1,20 +1,19 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": { "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/crisis.csv"},
-    "mark": "bar",
-    "title":"On a scale of 1-10 how worried are people about global warming",
-    "width": {"step": 25},
-    "transform": [{"calculate":"percent*100","as":"percentage"}],
-    "encoding": {
-      "y": {
-        "aggregate": "sum", "field": "percentage",
-        "title": "percent",
-        "stack":  "normalize"
-      },
-      "x": {"field": "year"},
-      "color": {
-        "field": "scale"
-      }
-    }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/crisis.csv"
+  },
+  "mark": "bar",
+  "title": "On a scale of 1-10 how worried are people about global warming",
+  "width": {"step": 25},
+  "encoding": {
+    "y": {
+      "aggregate": "sum",
+      "field": "percent",
+      "title": "percent",
+      "stack": "normalize"
+    },
+    "x": {"field": "year"},
+    "color": {"field": "scale"}
   }
-  
+}
