@@ -1,0 +1,18 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": { "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/crisis.csv"},
+    "mark": "bar",
+    "width": {"step": 17},
+    "encoding": {
+      "y": {
+        "aggregate": "sum", "field": "percent",
+        "title": "percent",
+        "stack":  "normalize"
+      },
+      "x": {"field": "year"},
+      "color": {
+        "field": "scale"
+      }
+    }
+  }
+  
