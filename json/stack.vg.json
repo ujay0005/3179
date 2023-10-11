@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": { "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/crisis.csv"},
     "mark": "bar",
-    "title":"",
-    "width": {"step": 17},
+    "title":"On a scale of 1-10 how worried are people about global warming",
+    "width": {"step": 25},
     "encoding": {
       "y": {
         "aggregate": "sum", "field": "percent",
