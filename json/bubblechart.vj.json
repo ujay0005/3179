@@ -67,7 +67,7 @@
             "padding": 7,
             "size": [{"signal": "width"}, {"signal": "height"}],
             "sort": {"field": "emission", "order": "descending"}
-          },
+          }
   
         ]
       }
