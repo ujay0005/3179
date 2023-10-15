@@ -1,98 +1,219 @@
 {
-    "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "width": 800,
-    "height": 800,
-    "autosize": "pad",
-    "title":"ghg emissions by country",
-    "data": [
-      {
-        "name": "tree",
-        "values": [
-          {"id": 1, "country": "", "parent": null, "emission": 10, "year": 2019},
-        
-          {
-            "id": 5,
-            "country": "Australia",
-            "text": "Australia",
-            "parent": 1,
-            "emission": 4,
-            "year": 2020
-          },
-          {
-            "id": 6,
-            "country": "America",
-            "text": "America",
-            "parent": 1,
-            "emission": 8,
-            "year": 2020
-          },
-          {
-            "id": 7,
-            "country": "Other",
-            "text": "Other",
-            "parent": 1,
-            "emission": 4,
-            "year": 2020
-          }
-        ],
-  
-        "transform": [
-          {"type": "stratify", "key": "id", "parentKey": "parent"},
-          {
-            "type": "pack",
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 800,
+  "height": 800,
+  "autosize": "pad",
+  "title": "ghg emissions by country",
+  "data": [
+    {
+      "name": "tree",
+      "values": [
+        {
+          "id": 1,
+          "country": "",
+          "parent": null,
+          "emission": 10,
+          "year": 2019
+        },
+        {
+          "id": 2,
+          "country": "Solomon Islands",
+          "text": "Solomon Islands",
+          "parent": 1,
+          "emission": 67.33
+        },
+        {
+          "id": 3,
+          "country": "Qatar",
+          "text": "Qatar",
+          "parent": 1,
+          "emission": 41.51
+        },
+        {
+          "id": 4,
+          "country": "Turkmenistan",
+          "text": "Turkmenistan",
+          "parent": 1,
+          "emission": 32.18
+        },
+        {
+          "id": 5,
+          "country": "Kuwait",
+          "text": "Kuwait",
+          "parent": 1,
+          "emission": 31.82
+        },
+        {
+          "id": 6,
+          "country": "Bahrain",
+          "text": "Bahrain",
+          "parent": 1,
+          "emission": 31.82
+        },
+        {
+          "id": 7,
+          "country": "Brunei",
+          "text": "Brunei",
+          "parent": 1,
+          "emission": 27.96
+        },
+        {
+          "id": 8,
+          "country": "United Arab Emirates",
+          "text": "United Arab Emirates",
+          "parent": 1,
+          "emission": 25.27
+        },
+        {
+          "id": 9,
+          "country": "Mongolia",
+          "text": "Mongolia",
+          "parent": 1,
+          "emission": 23.3
+        },
+        {
+          "id": 10,
+          "country": "Guyana",
+          "text": "Guyana",
+          "parent": 1,
+          "emission": 23.09
+        },
+        {
+          "id": 12,
+          "country": "Australia",
+          "text": "Australia",
+          "parent": 1,
+          "emission": 22.78
+        },
+
+        {
+          "id": 20,
+          "country": "United States",
+          "text": "United States",
+          "parent": 1,
+          "emission": 15.96
+        },
+        {
+          "id": 21,
+          "country": "China",
+          "text": "China",
+          "parent": 1,
+          "emission": 8.71
+        }
+      ],
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "pack",
+          "field": "emission",
+          "padding": 7,
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ],
+          "sort": {
             "field": "emission",
-            "padding": 7,
-            "size": [{"signal": "width"}, {"signal": "height"}],
-            "sort": {"field": "emission", "order": "descending"}
-          }
-  
-        ]
-      }
-    ],
-    "scales": [
-      {
-        "name": "color",
-        "type": "ordinal",
-        "domain": {"data": "tree", "field": "depth"},
-        "range": ["white", "#FFC9B3"]
-      }
-    ],
-    "marks": [
-      {
-        "type": "symbol",
-        "from": {"data": "tree"},
-        "encode": {
-          "enter": {
-            "shape": {"value": "circle"},
-            "fill": {"scale": "color", "field": "depth"},
-            "tooltip": {"signal": "datum.country + datum.emission"}
-          },
-          "update": {
-            "x": {"field": "x"},
-            "y": {"field": "y"},
-            "size": {"signal": "4 * datum.r * datum.r"},
-            "stroke": {"value": "white"},
-            "strokeWidth": {"value": 0.5}
+            "order": "descending"
           }
         }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {
+        "data": "tree",
+        "field": "depth"
       },
-      {
-        "type": "text",
-        "from": {"data": "tree"},
-        "encode": {
-          "enter": {
-            "text": {"field": "text"},
-            "fontSize": {"value": 8},
-            "baseline": {"value": "middle"}
+      "range": [
+        "white",
+        "#FFC9B3"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "symbol",
+      "from": {
+        "data": "tree"
+      },
+      "encode": {
+        "enter": {
+          "shape": {
+            "value": "circle"
           },
-          "update": {
-            "x": {"field": "x"},
-            "y": {"field": "y"},
-            "dx": {"signal": "(datum.leftside ? -1 : 1)"},
-            "angle": {"signal": "datum.leftside ? datum.angle : datum.angle"},
-            "align": {"signal": "datum.leftside ? 'center' : 'center'"}
+          "fill": {
+            "scale": "color",
+            "field": "depth"
+          },
+          "tooltip": {
+            "signal": "datum.country + datum.emission"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "size": {
+            "signal": "4 * datum.r * datum.r"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.5
           }
         }
       }
-    ]
-  }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "tree"
+      },
+      "encode": {
+        "enter": {
+          "text": {
+            "field": "text"
+          },
+          "fontSize": {
+            "value": 8
+          },
+          "baseline": {
+            "value": "middle"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "dx": {
+            "signal": "(datum.leftside ? -1 : 1)"
+          },
+          "angle": {
+            "signal": "datum.leftside ? datum.angle : datum.angle"
+          },
+          "align": {
+            "signal": "datum.leftside ? 'center' : 'center'"
+          }
+        }
+      }
+    }
+  ]
+}
