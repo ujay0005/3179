@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "description": "A basic stacked area chart example.",
-    "width": 900,
+    "width": 800,
     "height": 350,
     "padding": 5,
     "title":"GHG emissions",
