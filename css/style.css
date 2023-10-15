@@ -4,9 +4,10 @@
     padding-right: 50px;
 }
 #box1text p{
-    text-align: center;
-    padding-top: 80px;
+    text-align: left;
+    padding-top: 40px;
     font-size: 10pt;
+    padding-left: 90px;
 }
 #box2{
     background-color: rgb(139, 121, 18);

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 800,
+  "width": 600,
   "height": 800,
   "autosize": "pad",
   "title": "ghg emissions by country",
@@ -8,13 +8,7 @@
     {
       "name": "tree",
       "values": [
-        {
-          "id": 1,
-          "country": "",
-          "parent": null,
-          "emission": 10,
-          "year": 2019
-        },
+        {"id": 1, "country": "", "parent": null, "emission": 10},
         {
           "id": 2,
           "country": "Solomon Islands",
@@ -45,84 +39,69 @@
         },
         {
           "id": 6,
-          "country": "Bahrain",
-          "text": "Bahrain",
-          "parent": 1,
-          "emission": 31.82
-        },
-        {
-          "id": 7,
-          "country": "Brunei",
-          "text": "Brunei",
-          "parent": 1,
-          "emission": 27.96
-        },
-        {
-          "id": 8,
-          "country": "United Arab Emirates",
-          "text": "United Arab Emirates",
-          "parent": 1,
-          "emission": 25.27
-        },
-        {
-          "id": 9,
-          "country": "Mongolia",
-          "text": "Mongolia",
-          "parent": 1,
-          "emission": 23.3
-        },
-        {
-          "id": 10,
-          "country": "Guyana",
-          "text": "Guyana",
-          "parent": 1,
-          "emission": 23.09
-        },
-        {
-          "id": 12,
           "country": "Australia",
           "text": "Australia",
           "parent": 1,
           "emission": 22.78
         },
-
         {
-          "id": 20,
+          "id": 7,
           "country": "United States",
           "text": "United States",
           "parent": 1,
           "emission": 15.96
         },
         {
-          "id": 21,
+          "id": 8,
           "country": "China",
           "text": "China",
           "parent": 1,
           "emission": 8.71
+        },
+        {
+          "id": 9,
+          "country": "Kiribati",
+          "text": "Kiribati",
+          "parent": 1,
+          "emission": 0.74
+        },
+        {
+          "id": 10,
+          "country": "Burundi",
+          "text": "Burundi",
+          "parent": 1,
+          "emission": 0.6
+        },
+        {
+          "id": 11,
+          "country": "Rwanda",
+          "text": "Rwanda",
+          "parent": 1,
+          "emission": 0.59
+        },
+        {
+          "id": 12,
+          "country": "Ghana",
+          "text": "Ghana",
+          "parent": 1,
+          "emission": 0.46
+        },
+        {
+          "id": 13,
+          "country": "Bhutan",
+          "text": "Bhutan",
+          "parent": 1,
+          "emission": 0.41
         }
       ],
       "transform": [
-        {
-          "type": "stratify",
-          "key": "id",
-          "parentKey": "parent"
-        },
+        {"type": "stratify", "key": "id", "parentKey": "parent"},
         {
           "type": "pack",
           "field": "emission",
           "padding": 7,
-          "size": [
-            {
-              "signal": "width"
-            },
-            {
-              "signal": "height"
-            }
-          ],
-          "sort": {
-            "field": "emission",
-            "order": "descending"
-          }
+          "size": [{"signal": "width"}, {"signal": "height"}],
+          "sort": {"field": "emission", "order": "descending"}
         }
       ]
     }
@@ -131,87 +110,44 @@
     {
       "name": "color",
       "type": "ordinal",
-      "domain": {
-        "data": "tree",
-        "field": "depth"
-      },
-      "range": [
-        "white",
-        "#FFC9B3"
-      ]
+      "domain": {"data": "tree", "field": "depth"},
+      "range": ["white", "#FFC9B3"]
     }
   ],
   "marks": [
     {
       "type": "symbol",
-      "from": {
-        "data": "tree"
-      },
+      "from": {"data": "tree"},
       "encode": {
         "enter": {
-          "shape": {
-            "value": "circle"
-          },
-          "fill": {
-            "scale": "color",
-            "field": "depth"
-          },
-          "tooltip": {
-            "signal": "datum.country + datum.emission"
-          }
+          "shape": {"value": "circle"},
+          "fill": {"scale": "color", "field": "depth"},
+          "tooltip": {"signal": "datum.country + datum.emission"}
         },
         "update": {
-          "x": {
-            "field": "x"
-          },
-          "y": {
-            "field": "y"
-          },
-          "size": {
-            "signal": "4 * datum.r * datum.r"
-          },
-          "stroke": {
-            "value": "white"
-          },
-          "strokeWidth": {
-            "value": 0.5
-          }
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "size": {"signal": "4 * datum.r * datum.r"},
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 0.5}
         }
       }
     },
     {
       "type": "text",
-      "from": {
-        "data": "tree"
-      },
+      "from": {"data": "tree"},
       "encode": {
         "enter": {
-          "text": {
-            "field": "text"
-          },
-          "fontSize": {
-            "value": 8
-          },
-          "baseline": {
-            "value": "middle"
-          }
+          "text": {"field": "text"},
+          "fontSize": {"value": 8},
+          "baseline": {"value": "middle"}
         },
         "update": {
-          "x": {
-            "field": "x"
-          },
-          "y": {
-            "field": "y"
-          },
-          "dx": {
-            "signal": "(datum.leftside ? -1 : 1)"
-          },
-          "angle": {
-            "signal": "datum.leftside ? datum.angle : datum.angle"
-          },
-          "align": {
-            "signal": "datum.leftside ? 'center' : 'center'"
-          }
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "dx": {"signal": "(datum.leftside ? -1 : 1)"},
+          "angle": {"signal": "datum.leftside ? datum.angle : datum.angle"},
+          "align": {"signal": "datum.leftside ? 'center' : 'center'"}
         }
       }
     }
