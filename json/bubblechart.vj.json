@@ -110,8 +110,8 @@
     {
       "name": "color",
       "type": "ordinal",
-      "domain": {"data": "tree", "field": "depth"},
-      "range": ["white", "#FFC9B3"]
+      "domain": {"data": "tree", "field": "id"},
+      "range": ["transparent", "yellow","pink","blue","red","orange","#4287f5","#f5429c","#f58142","#f54269","#0d104f","#a1bf56","green"]
     }
   ],
   "marks": [
@@ -121,8 +121,9 @@
       "encode": {
         "enter": {
           "shape": {"value": "circle"},
-          "fill": {"scale": "color", "field": "depth"},
-          "tooltip": {"signal": "datum.country + datum.emission"}
+          "fill": {"scale": "color", "field": "id"},
+          "tooltip": {"signal": "datum.country + datum.emission"},
+          "stroke":"black"
         },
         "update": {
           "x": {"field": "x"},
