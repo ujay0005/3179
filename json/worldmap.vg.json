@@ -3,6 +3,7 @@
   "title": "Change in average temperature",
   "width": 800,
   "height": 400,
+  "background":"transparent",
   "projection": {"type": "equalEarth"},
   "params": [
     {
