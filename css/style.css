@@ -1,5 +1,12 @@
 #box1{
     background-color: rgb(41, 139, 18);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#box1text p{
+    text-align: center;
+    padding-top: 80px;
+    font-size: 10pt;
 }
 #box2{
     background-color: rgb(139, 121, 18);

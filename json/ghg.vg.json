@@ -1,10 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "description": "A basic stacked area chart example.",
-    "width": 600,
+    "width": 800,
     "height": 350,
     "padding": 5,
-    "title":"GHG emissions",
     "data": [
       {
         "name": "table",
@@ -181,7 +180,7 @@
             "encode": {
               "enter": {
                 "interpolate": {"value": "monotone"},
-                "x": {"scale": "x", "field": "x"},
+                "x": {"scale": "x", "field": "x","tickCount":0},
                 "y": {"scale": "y", "field": "y0"},
                 "y2": {"scale": "y", "field": "y1"},
                 "fill": {"scale": "color", "field": "c"}
