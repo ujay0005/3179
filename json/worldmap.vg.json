@@ -1,9 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Change in average temperature",
+  "width": 800,
+  "height": 400,
+  "projection": {"type": "equalEarth"},
   "params": [
     {
-      "name": "year",
+      "name": "Year_selection",
       "value": 2019,
       "bind": {
         "input": "range",
@@ -14,15 +17,15 @@
       }
     }
   ],
-  "width": 800,
-  "height": 400,
   "data": {
-    "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
-    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+    "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/worldmap.csv"
   },
-  "projection": {"type": "equalEarth"},
   "layer": [
     {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
       "transform": [
         {
           "calculate": "'Data is not available in ' + datum.properties.NAME",
@@ -49,30 +52,33 @@
     {
       "transform": [
         {
-          "lookup": "properties.NAME",
+          "lookup": "Area",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/worldmap.csv"
+              "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+              "format": {
+                "type": "topojson",
+                "feature": "ne_110m_admin_0_countries"
+              }
             },
-            "key": "Area",
-            "fields": ["Temp Changes", "Year"]
-          }
+            "key": "properties.NAME"
+          },
+          "as": "geo"
         },
-        {"filter": "datum.Year == year"}
+        {"filter": "datum.Year == Year_selection"}
       ],
-      "mark": {"type": "geoshape", "stroke": "white"},
+      "mark": {"type": "geoshape", "stroke": "black"},
       "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
         "color": {
           "field": "Temp Changes",
           "type": "quantitative",
           "scale": {
             "type": "linear",
-            "range": ["#187dc9", "#ffffff", "#f55151", "#fc0000"]
+            "range": ["#187dc9", "#ffffff", "#f55151", "#fc0000"],
+            "domain": [-2, 0, 2]
           },
-          "tooltip": [
-            {"field": "properties.NAME", "type": "nominal", "title": "Area"},
-            {"field": "Temp Changes", "type": "quantitative"}
-          ]
+          "legend": {}
         }
       }
     }
