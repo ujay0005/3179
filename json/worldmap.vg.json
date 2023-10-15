@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Change in average temperature",
-  "width": 800,
-  "height": 400,
+  "width": 500,
+  "height": 300,
   "background":"transparent",
   "projection": {"type": "equalEarth"},
   "params": [
