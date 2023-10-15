@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+
+    <script src="vega_lite.js"></script>
+
+      <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- body -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300&display=swap" rel="stylesheet">
+    
+    <!-- header -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+    <!-- heading 2-->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+
+      <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+
+    <title>Week 10 Homework Task</title>
+</head>
+<body>
+    <div class="page">
+
+        <!-- title block -->
+        <div class="title_block">
+          <div class="pure-u-1-1">
+            <h1>GLOBAL ENERGY CONSUMPTION & SOURCES</h1>
+            <p>This data visualisation by Leon Phillips, depicts the energy consumed around the world. <br> It can be used to see how the world's energy consumption has changed over time by comparing <br> many different attributes such as: Country, Energy source type, and Year</p>
+          </div>
+        </div>
+        <!-- end pure grid group -->
+    
+        <!-- pure grid group -->
+        <div class="pure-u-1-1">
+            <div class = "country_title_block">
+               <h2>Country Comparison</h2>
+            </div>
+            <div class="pure-u-1-1">
+              <div id="map_bar", class = "map_bar_class"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+        
+                <!-- pure grid group -->
+                <div class="pure-g">
+                  <div class = "pure-u-2-3">
+                    <div class="country_map_description_class">
+                      <p>Note: In order to use this maps functionality most effectively, the Zoom slider
+                        <br>
+                        should first be used followed by the pan sliders to navigate to an ideal position
+                        <br>
+                         (based on whichever country is wanting to be investigated).
+                        <br>
+                        <br>
+                        This interactive map shows the percentage of energy produced from 
+                        <br>
+                        'low carbon sources' for each country. Where a 'low carbon source' 
+                        <br> 
+                        is defined as a nuclear or renewable energy source.
+                        <br>
+                        It can be seen that the continents of Africa and Europe have drastically
+                        <br>
+                        increased their relative energy production from 'low carbon sources', while
+                        <br>
+                        continents such as Asia, Australia, and North America have failed to. 
+                        <br>
+                        <br>
+                        <br>
+                      </p>
+                    </div>
+                  </div>
+                    <div class="pure-u-1-3">
+                      <div class="other_country_description_class">
+                        <p>
+                          Here, the way in which each continet produces its energy is explored in 
+                          more depth. The stacked bar chart displays the percentage energy consumed 
+                          from each energy production type while the donut chart shows the same but 
+                          for an entire world average. 
+                          <br>
+                          <br>
+                          It is seen that despite current societies great understanding of fossil fuel 
+                          emissions, it is still the main method of energy production aroudn the world. 
+
+
+                        </p>
+                      </div>
+                    </div>
+              
+                  </div>
+                  <!-- end pure grid group -->
+
+        <!-- Time title -->
+        <div>
+          <div class="pure-u-1-1">
+            <div class="time_title_block">
+              <h2>Time Comparison</h2>
+            </div>
+          </div>
+        </div>
+        <!-- end group -->
+        
+
+        <!-- Time Content -->
+        <div class="pure-g">
+          <div class = "pure-u-2-3">
+            <div class="country_map_description_class" id = time_comp_id>
+            </div>
+          </div>
+            <div class="pure-u-1-3">
+              <div class="other_country_description_class">
+                <p>
+                  Here, idioms are used to convey how energy production has 
+                  changed between the years of 1985 and 2016. The butterfly 
+                  chart is used to show a direct comparison between the two 
+                  year intervals. The line chart shows more detailed information
+                  including how the world's production has changed every year 
+                  between these two time periods.
+                  <br>
+                  <br>
+                  The value types of 'Percentage Share' and 'Total (terrawatt hours)'
+                  describe very different information. Upon quick analysis of the 
+                  'Percentage Share' data, it could easily be assumed that the energy 
+                  output over these time periods stay fairly consistent. However, although 
+                  this may be true relatively speaking, upon analysis of the 'Total (terrawatt hours)'
+                  data, it can be seen that the World produces significantly more energy in 2016
+                  compared to what it did in 1985. As such more fossil fuels are being emitted into 
+                  the atmosphere, having a detrimental effect on the environment. 
+                  <br>
+                  <br>
+                  
+
+                </p>
+
+                
+              </div>
+            </div>
+      
+          </div>
+
+        <!-- end pure grid group -->
+    
+         <!-- Spacer -->
+        <div class = "pure-u-1-1">
+
+        </div>
+
+        <!-- GDP Title Block -->
+        <div class = "pure-u-1-1">
+          <div class = "gdp_title_block">
+            <h2>Effect of GDP</h2>
+          </div>
+
+        </div>
+
+        <!-- end pure grid group -->
+
+        <!--GDP Content Block-->
+        <div class="pure-g">
+          <div class = "pure-u-2-3">
+            <div class="gdp_description_class" >
+              <p>
+                Both of the idioms displayed here describe how GDP has an effect on both 
+                <br>
+                the total amount of energy consumed and how that energy is produced. 
+                <br>
+                The top scatter plot describing the relationship between a country's GDP
+                <br>
+                and total consumed energy is fitted with a linear trendline which is displayed 
+                <br>
+                using a red line mark. It is clearly seen that a very positive, directly 
+                <br>
+                proportional, relationship is established between the two attributes. 
+                <br>
+                This is further reiterated as the mean square error of the linear trendline 
+                <br>
+                was calculated to be only 0.89. 
+                <br>
+                <br>
+                The bottom XY heatmap is used to describe how GDP effects how energy is produced.
+                <br>
+                It can be seen that in poorer countries, there is a very high and medium 
+                <br>
+                dependency on using oil and renewables as an energy source respectively. 
+                <br>
+                Further, nuclear, gas, and coal energy sources are not used at all. 
+                <br>
+                While in richer countries, a broad range of energy sources are used. With coal, 
+                <br>
+                gas, and renewable energy sources producing the vast majority of energy. 
+                <br>
+                <br>
+                The definition for the wealth statuses for countries are such that their GDP is: 
+                <br>
+                <br>
+                <br>
+                <span class = status1> Very Poor: </span> <span class = status2>less than USD 1 billion</span> 
+                <br>
+                <span class = status1>Poor: </span> <span class = status2>more than USD 10 billion </span>
+                <br>
+                <span class = status1>Middle: </span> <span class = status2>more than USD 100 billion </span>
+                <br>
+                <span class = status1>Rich: </span> <span class = status2>less than USD 1 trillion </span>
+                <br>
+                <span class = status1>Very Rich: </span> <span class = status2>more than USD 1 trillion </span>
+              </p>
+
+            </div>
+          </div>
+            <div class="pure-u-1-3" id = "other_props_id">
+              <div class="gdp_content_class">
+              </div>
+            </div>
+      
+          </div>
+
+        <!-- end pure grid group -->
+    
+      </div> <!-- end page -->
+
+</body>
+</html>
