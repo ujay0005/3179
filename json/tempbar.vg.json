@@ -33,7 +33,7 @@
          "tooltip": [
           {"field": "Year", "type": "quantitative", "title": "Year"},
            {"field": "Anomaly", "type": "quantitative", "title": "Temperature Change(°C)"}
-        ],
+        ]
       }
     },
     {

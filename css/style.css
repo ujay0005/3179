@@ -129,13 +129,17 @@ text-align: center;
 
 #tempbar{
     padding-left: 50px;
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
-#box7 p{
-    padding-top: 90px;
-    padding-left: 90px;
-    padding-right: 30px;
+
+#box7t{
+
+    padding-top: 20px;
+    text-align: left;
+    font-family:Tahoma;
+    font-size:11pt;
+    font-weight: 300;
 }
 
 #box8{
