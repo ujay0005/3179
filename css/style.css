@@ -33,7 +33,7 @@ h1 {
 #box1text p {
     text-align: left;
     font-family:Tahoma;
-    font-size:10pt;
+    font-size:11pt;
     font-weight: 300;
     padding-left: 40px;
 }
@@ -89,6 +89,11 @@ margin-right: 30px;
 #box4t{
     padding-left: 50px;
     padding-top: 50px;
+    text-align: left;
+    font-family:Tahoma;
+    font-size:11pt;
+    font-weight: 300;
+
 }
 
 #box5{
