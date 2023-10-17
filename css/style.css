@@ -1,5 +1,5 @@
 h1 {
-    background-color: rgb(249, 248, 245);
+    background-color: rgb(255, 255, 255);
     font-family: 'Antic Didone', serif;
     font-family: 'Bebas Neue', sans-serif;
     font-family: 'EB Garamond', serif;
@@ -13,7 +13,7 @@ h1 {
 }
 
 #box1 {
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(255, 255, 255);
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
