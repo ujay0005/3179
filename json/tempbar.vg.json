@@ -1,39 +1,44 @@
+
 {
-    "width": 600,
-    "data": {
-      "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/tempbar.csv"},
-    "layer": [
-      {
-        "mark": "bar",
-        "encoding": {
-          "x": {
-            "type": "quantitative",
-            "field": "Year",
-            "axis": {"tickCount": 20},
-            "scale": {"domain": [1850, 2023]}
-          },
-          "y": {"type": "quantitative", "field": "Anomaly"},
-          "color": {
-            "field": "Anomaly",
-            "scale": {
-              "range": ["#187dc9", "#ffffff", "#f55151", "#fc0000"],
-              "type": "linear"
-            }
-          }
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"width": 800,
+"background":"transparent",
+"data": {
+  "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/tempbar.csv"},
+"layer": [
+  {
+    "mark": {"type":"bar","width": 3},
+    "encoding": {
+      "x": {
+        "type": "quantitative",
+        "field": "Year",
+        "axis": {"tickCount": 10,"grid": false},
+        "scale": {"domain": [1850, 2023]}, "title":null
       },
-      {
-        "mark": {"type": "line", "color": "purple"},
-        "transform": [{"regression": "Anomaly", "on": "Year"}],
-        "encoding": {
-          "y": {"field": "Anomaly", "type": "quantitative","title":"temp change"},
-          "x": {
-            "field": "Year",
-            "type": "quantitative",
-            "axis": {"tickCount": 20},
-            "scale": {"domain": [1850, 2023]}
-          }
-        }
+      "y": {"type": "quantitative", "field": "Anomaly",
+       "axis": {"grid": false, "title":null,"tickCount": 0}},
+      "color": {
+        "field": "Anomaly",
+        "scale": {
+          "range": ["#187dc9", "#ffffff", "#f55151", "#fc0000"],
+          "type": "linear"
+        },
+        "legend":false
       }
-    ]
+    }
+  },
+  {
+    "mark": {"type": "line", "color": "purple"},
+    "transform": [{"regression": "Anomaly", "on": "Year"}],
+    "encoding": {
+      "y": {"field": "Anomaly", "type": "quantitative","title":"temp change"},
+      "x": {
+        "field": "Year",
+        "type": "quantitative",
+        "axis": {"tickCount": 20},
+        "scale": {"domain": [1850, 2023]}
+      }
+    }
   }
+]
+}

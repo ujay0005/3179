@@ -107,8 +107,8 @@ margin-right: 30px;
 text-align: center;
 }
 
-#middleb6 p{
-    background-color: rgb(249, 248, 245);
+#middleb6 h3{
+
     font-family: 'Antic Didone', serif;
     font-family: 'Bebas Neue', sans-serif;
     font-family: 'EB Garamond', serif;
@@ -118,7 +118,8 @@ text-align: center;
     font-family: 'Notable', sans-serif;
     font-family: 'Noto Nastaliq Urdu', serif;
     font-family: 'Oswald', sans-serif;
-    font-size: 30pt;
+    font-size: 15pt;
+    text-align: center;
 }
 
 #worldmap{
