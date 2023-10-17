@@ -16,7 +16,7 @@
         "scale": {"domain": [1850, 2023]}, "title":null
       },
       "y": {"type": "quantitative", "field": "Anomaly",
-       "axis": {"grid": false, "title":null,"tickCount": 0}},
+       "axis": {"grid": false, "title":null,"tickCount": 3}},
       "color": {
         "field": "Anomaly",
         "scale": {
