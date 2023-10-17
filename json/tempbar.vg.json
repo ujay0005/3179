@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height":400,
+  "width": 600,
+  "height":300,
   "background": "transparent",
   "data": {
     "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/tempbar.csv"
   },
   "layer": [
     {
-      "mark": {"type": "bar", "width": 3},
+      "mark": {"type": "bar", "width": 2},
       "encoding": {
         "x": {
           "type": "quantitative",
@@ -33,7 +33,7 @@
          "tooltip": [
           {"field": "Year", "type": "quantitative", "title": "Year"},
            {"field": "Anomaly", "type": "quantitative", "title": "Temperature Change(°C)"}
-        ]
+        ],
       }
     },
     {
