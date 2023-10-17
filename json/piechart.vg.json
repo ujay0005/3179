@@ -4,7 +4,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/sector.csv"
   },
-  "height": 400,
+  "height": 300,
   "width": 300,
   "background": "transparent",
   "params": [
@@ -24,7 +24,7 @@
   "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
     "theta": {"field": "Value", "type": "quantitative"},
-    "color": {"field": "Sector", "type": "nominal", "scale": { "range": ["#F7DD72","#A5C882","#5AB1BB","#4E6766","#1E152A"]}},
+    "color": {"field": "Sector", "type": "nominal", "scale": { "range": ["#48233C", "#40376E", "#36558F", "#96ACB7", "#D4E4BC"]}},
     "tooltip": [{"field": "Sector", "type": "nominal", "title": "Sector"},{"field": "Value", "type": "quantitative", "title": "Emmisions"}]
   },
   "config": {"legend": {"labelFont": "sans-serif", "titleFont": "sans-serif","labelFontSize":12,"titleFontSize":14}}

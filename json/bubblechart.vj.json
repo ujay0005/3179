@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 300,
-  "height": 400,
+  "width": 700,
+  "height": 800,
   "autosize": "pad",
-  "title": "ghg emissions by country",
+  
   "data": [
     {
       "name": "tree",
       "values": [
-        {"id": 1, "country": "", "parent": null, "emission": 10},
+        {"id": 1, "country": "", "parent": null},
         {
           "id": 2,
           "country": "Solomon Islands",
@@ -111,7 +111,7 @@
       "name": "color",
       "type": "ordinal",
       "domain": {"data": "tree", "field": "id"},
-      "range": ["transparent", "yellow","pink","blue","red","orange","#4287f5","#f5429c","#f58142","#f54269","#0d104f","#a1bf56","green"]
+      "range": ["transparent", "#C63D2F","#E25E3E","#FF9B50","#FFBB5C","#FFCD4B","#FFECAF","#CECE5A","#D2DE32","#618264","#79AC78","#B0D9B1","618264"]
     }
   ],
   "marks": [
@@ -122,7 +122,7 @@
         "enter": {
           "shape": {"value": "circle"},
           "fill": {"scale": "color", "field": "id"},
-          "tooltip": {"signal": "datum.country + datum.emission"},
+          "tooltip": {"signal": "datum.country + ' '+datum.emission"},
           "stroke":"black"
         },
         "update": {
@@ -140,7 +140,8 @@
       "encode": {
         "enter": {
           "text": {"field": "text"},
-          "fontSize": {"value": 8},
+          "fontSize": {"value": 12},
+          "font":{"value":"serif"},
           "baseline": {"value": "middle"}
         },
         "update": {
