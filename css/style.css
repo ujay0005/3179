@@ -57,7 +57,7 @@ h1 {
 }
 
 #box2{
-    padding-bottom: 40px;
+    padding-bottom: 80px;
 }
 
 #middleb3{
@@ -82,5 +82,37 @@ margin-right: 30px;
 }
 
 #piechart{
-    padding-left: 30px;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+#box4t{
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+#box5{
+    padding-bottom: 80px;
+}
+
+#middleb6{
+background-color: rgb(170, 167, 167);
+margin-left: 30px;
+margin-right: 30px;
+text-align: center;
+}
+
+#middleb6 p{
+    text-align: center;
+    font-family: 'Antic Didone', serif;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Notable', sans-serif;
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15pt;
+    font-family: 400;
 }

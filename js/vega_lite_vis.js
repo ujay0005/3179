@@ -7,4 +7,7 @@ vegaEmbed("#piechart", vg_2, {mode: "vega-lite"}).then(console.log).catch(consol
 var vg_3 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/bubblechart.vj.json";
 vegaEmbed("#bubblechart", vg_3, {mode: "vega-lite"}).then(console.log).catch(console.warn)
 
+var vg_4 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/worldmap.vg.json";
+vegaEmbed("#worldmap", vg_4, {mode: "vega-lite"}).then(console.log).catch(console.warn)
+
 
