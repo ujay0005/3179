@@ -189,7 +189,8 @@
               "y2": {"scale": "y", "field": "y1"},
               "fill": {"scale": "color", "field": "c"},
               "tooltip": {
-                "signal": "{title: datum.c + '' , 'Year': datum.x, 'Emission (MtCO2e)':datum.y }"
+                "signal": "{title: datum.c + '' , 'Year': datum.x, 'Emission (MtCO2e)':datum.y }",
+                "font":{"expr": "Tahoma"}
               }
             },
             "update": {"fillOpacity": {"value": 1}},
