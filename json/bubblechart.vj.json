@@ -111,7 +111,7 @@
       "name": "color",
       "type": "ordinal",
       "domain": {"data": "tree", "field": "id"},
-      "range": ["transparent", "#C63D2F","#E25E3E","#FF9B50","#FFBB5C","#FFCD4B","#FFECAF","#CECE5A","#D2DE32","#618264","#79AC78","#B0D9B1","618264"]
+      "range": ["transparent", "#C63D2F","#C63D2F","#E25E3E","#FF9B50","#FFBB5C","#FFCD4B","#FFECAF","#CECE5A","#D2DE32","#618264","#79AC78","#B0D9B1","618264"]
     }
   ],
   "marks": [
@@ -122,7 +122,7 @@
         "enter": {
           "shape": {"value": "circle"},
           "fill": {"scale": "color", "field": "id"},
-          "tooltip": {"signal": "datum.country + ' '+datum.emission"},
+          "tooltip": {"signal": "datum.country + '(tCO2e per capita): '+datum.emission"},
           "stroke":"black"
         },
         "update": {
@@ -141,7 +141,7 @@
         "enter": {
           "text": {"field": "text"},
           "fontSize": {"value": 12},
-          "font":{"value":"serif"},
+          "font":{"value":"Tahoma"},
           "baseline": {"value": "middle"}
         },
         "update": {
