@@ -1,44 +1,57 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"width": 800,
-"background":"transparent",
-"data": {
-  "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/tempbar.csv"},
-"layer": [
-  {
-    "mark": {"type":"bar","width": 3},
-    "encoding": {
-      "x": {
-        "type": "quantitative",
-        "field": "Year",
-        "axis": {"tickCount": 10,"grid": false},
-        "scale": {"domain": [1850, 2023]}, "title":null
-      },
-      "y": {"type": "quantitative", "field": "Anomaly",
-       "axis": {"grid": false, "title":null,"tickCount": 3}},
-      "color": {
-        "field": "Anomaly",
-        "scale": {
-          "range": ["#187dc9", "#ffffff", "#f55151", "#fc0000"],
-          "type": "linear"
-        },
-        "legend":false
-      }
-    }
+  "width": 800,
+  "background": "transparent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/tempbar.csv"
   },
-  {
-    "mark": {"type": "line", "color": "purple"},
-    "transform": [{"regression": "Anomaly", "on": "Year"}],
-    "encoding": {
-      "y": {"field": "Anomaly", "type": "quantitative","title":"temp change"},
-      "x": {
-        "field": "Year",
-        "type": "quantitative",
-        "axis": {"tickCount": 20},
-        "scale": {"domain": [1850, 2023]}
+  "layer": [
+    {
+      "mark": {"type": "bar", "width": 3},
+      "encoding": {
+        "x": {
+          "type": "quantitative",
+          "field": "Year",
+          "axis": {"tickCount": 10, "grid": false},
+          "scale": {"domain": [1850, 2023]},
+          "title": null
+        },
+        "y": {
+          "type": "quantitative",
+          "field": "Anomaly",
+          "axis": {"grid": false, "title": null, "tickCount": 3}
+        },
+        "color": {
+          "field": "Anomaly",
+          "scale": {
+            "range": ["#187dc9", "#ffffff", "#f55151", "#fc0000"],
+            "type": "linear"
+          },
+          "legend":false
+        },
+         "tooltip": [
+          {"field": "Year", "type": "quantitative", "title": "Year"},
+           {"field": "Anomaly", "type": "quantitative", "title": "Temperature Change(°C)"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "purple"},
+      "transform": [{"regression": "Anomaly", "on": "Year"}],
+      "encoding": {
+        "y": {
+          "field": "Anomaly",
+          "type": "quantitative",
+          "title": "temp change"
+        },
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {"tickCount": 20},
+          "scale": {"domain": [1850, 2023]}
+        }
+       
       }
     }
-  }
-]
+  ]
 }
