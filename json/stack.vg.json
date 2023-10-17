@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/ujay0005/3179/main/data/crisis.csv"
   },
   "height":150,
-  "width":300,
+  "width":600,
   "mark": "bar",
   "title": "On a scale of 1-10 how worried are people about global warming",
 
@@ -13,11 +13,24 @@
       "aggregate": "sum",
       "field": "percent",
       "title": null,
-      "stack": "normalize"
+      "stack": "normalize",
+      "axis":{"tickCount":0}
+      
     },
     "y": {"field": "year","title":null},
     "color": {"field": "scale",
-    "sort": { "order": "descending"}}
-
+    "sort": { "order": "descending"}},
+    "tooltip":[ {"field": "year", "type": "quantitative", "title": "Year"},{"field": "scale", "type": "quantitative", "title": "Scale"},
+    {"field": "sum_percent", "type": "quantitative", "title": "Percentage(%)"}]
+  },
+  "config": {
+    "legend": {
+      "labelFont": "Tahoma",
+      "titleFont": "Tahoma",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+     
+    },
+    "view": {"stroke": "transparent"}
   }
 }
