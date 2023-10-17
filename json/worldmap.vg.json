@@ -76,7 +76,7 @@
           "scale": {
             "type": "linear",
             "range": ["#187dc9", "#ffffff", "#f55151", "#fc0000"],
-            "domain": [-2, 0, 2]
+            "domain": [-3.5, 0, 5.5]
           },
           "legend": {}
         }
