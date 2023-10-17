@@ -165,3 +165,14 @@ text-align: center;
     font-size: 15pt;
     text-align: center;
 }
+
+
+#box10t{
+    padding-right: 30px;
+    padding-left: 250px;
+    text-align: left;
+    font-family:Tahoma;
+    font-size:11pt;
+    font-weight: 300;
+    width: 750px;
+}
