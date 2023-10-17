@@ -52,8 +52,8 @@ h1 {
     color:#4c78a8
 }
 
-#no2{
-    color:#72b7b3,
+#nitrous{
+    color:#67a8a4,
 }
 
 #box2{
@@ -66,8 +66,8 @@ margin-left: 30px;
 margin-right: 30px;
 }
 
-#middleb3 p{
-    text-align: center;
+#middleb3 h3{
+
     font-family: 'Antic Didone', serif;
     font-family: 'Bebas Neue', sans-serif;
     font-family: 'EB Garamond', serif;
@@ -78,7 +78,7 @@ margin-right: 30px;
     font-family: 'Noto Nastaliq Urdu', serif;
     font-family: 'Oswald', sans-serif;
     font-size: 15pt;
-    font-family: 400;
+    text-align: center;
 }
 
 #piechart{
@@ -103,7 +103,7 @@ text-align: center;
 }
 
 #middleb6 p{
-    text-align: center;
+    background-color: rgb(249, 248, 245);
     font-family: 'Antic Didone', serif;
     font-family: 'Bebas Neue', sans-serif;
     font-family: 'EB Garamond', serif;
@@ -113,8 +113,7 @@ text-align: center;
     font-family: 'Notable', sans-serif;
     font-family: 'Noto Nastaliq Urdu', serif;
     font-family: 'Oswald', sans-serif;
-    font-size: 15pt;
-    font-family: 400;
+    font-size: 30pt;
 }
 
 #worldmap{
