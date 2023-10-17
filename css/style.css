@@ -19,13 +19,13 @@ h1 {
     padding-top: 20px;
 }
 .pure-u-1-12{
-    padding-right: 100px;
+    padding-right: 120px;
 }
 
 #box1 img{
-    padding-left:90px;
+    padding-left:40px;
     padding-right: 90px;
-    height:25vh
+    height:30vh
     
     
 }
@@ -34,7 +34,7 @@ h1 {
     text-align: left;
 
     font-size: 10pt;
-    padding-left: 90px;
+    padding-left: 40px;
 }
 
 
