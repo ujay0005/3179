@@ -14,7 +14,7 @@ vegaEmbed("#worldmap", vg_4, {mode: "vega-lite"}).then(console.log).catch(consol
 var vg_5 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/tempbar.vg.json";
 vegaEmbed("#tempbar", vg_5, {mode: "vega-lite"}).then(console.log).catch(console.warn)
 
-var vg_6 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/tempbar.vg.json";
+var vg_6 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/stack.vg.json";
 vegaEmbed("#stack", vg_6, {mode: "vega-lite"}).then(console.log).catch(console.warn)
 
 
