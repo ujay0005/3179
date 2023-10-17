@@ -11,3 +11,11 @@ var vg_4 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/worldmap.v
 vegaEmbed("#worldmap", vg_4, {mode: "vega-lite"}).then(console.log).catch(console.warn)
 
 
+var vg_5 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/tempbar.vg.json";
+vegaEmbed("#tempbar", vg_5, {mode: "vega-lite"}).then(console.log).catch(console.warn)
+
+var vg_6 = "https://raw.githubusercontent.com/ujay0005/3179/main/json/tempbar.vg.json";
+vegaEmbed("#stack", vg_6, {mode: "vega-lite"}).then(console.log).catch(console.warn)
+
+
+
