@@ -166,13 +166,20 @@ text-align: center;
     text-align: center;
 }
 
+#stack{
+    padding-left: 30px;
+    padding-top: 80px;
+}
 
 #box10t{
-    padding-right: 30px;
-    padding-left: 250px;
+    padding-right: 50px;
+    padding-left: 400px;
+    padding-bottom: 200px;
+    padding-top: 50px;
     text-align: left;
     font-family:Tahoma;
     font-size:11pt;
     font-weight: 300;
-    width: 750px;
+    width: 600px;
+    
 }
